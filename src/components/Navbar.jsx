@@ -20,11 +20,11 @@ export default function Navbar() {
         </a>
 
         <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
-          <a href="#how" onClick={() => setMenuOpen(false)}>How it works</a>
-          <a href="#security" onClick={() => setMenuOpen(false)}>Security</a>
+          <a href="#features" onClick={() => setMenuOpen(false)}>Fonctionnalités</a>
+          <a href="#how" onClick={() => setMenuOpen(false)}>Comment ça marche ?</a>
+          <a href="#security" onClick={() => setMenuOpen(false)}>Sécurité</a>
           <a href="#download" className="nav-cta" onClick={() => setMenuOpen(false)}>
-            Download
+            Télécharger
           </a>
         </nav>
 

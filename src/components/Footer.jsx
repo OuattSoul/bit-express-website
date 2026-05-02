@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
           <div className="foot-col">
             <span className="foot-col-title">Contact</span>
-            <a href="mailto:halgoafrica@gmail.com">halgoafrica@gmail.com</a>
+            <a href="mailto:info@bitexpress.com">info@bitexpress.com</a>
           </div>
         </div>
       </div>
