@@ -1,0 +1,113 @@
+.how {
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── Geometric pattern background ── */
+.how-pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  opacity: 0.04;
+}
+
+.pat-cell {
+  border: 1px solid var(--red);
+}
+
+.pat-cell:nth-child(odd) {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    var(--gold) 8px,
+    var(--gold) 9px
+  );
+}
+
+/* ── Steps layout ── */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: calc(33.33% - 60px);
+  right: calc(33.33% - 60px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--red-dim), var(--gold-dim), var(--red-dim));
+  pointer-events: none;
+  z-index: 0;
+}
+
+.step {
+  padding: 0 40px 0 0;
+  position: relative;
+}
+
+.step:last-child { padding-right: 0; }
+
+/* Big number */
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2.5px var(--red);
+  line-height: 1;
+  margin-bottom: 28px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.step-connector {
+  display: none;
+}
+
+.step-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.step-detail {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  padding: 6px 12px;
+  background: var(--gold-bg);
+  border: 1px solid rgba(201,146,10,0.2);
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .steps-grid { grid-template-columns: 1fr; gap: 48px; }
+  .steps-grid::before { display: none; }
+  .step { padding-right: 0; padding-left: 24px; border-left: 3px solid rgba(196,28,42,0.2); }
+  .step-number { font-size: 2.5rem; }
+}

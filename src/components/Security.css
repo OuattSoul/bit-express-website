@@ -1,0 +1,124 @@
+.security {
+  padding: 100px 0;
+}
+
+.sec-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left col */
+.sec-lead {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.sec-lead strong { color: var(--text); font-weight: 600; }
+
+.sec-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  background: var(--red-dim);
+  border: 1.5px solid rgba(196,28,42,0.2);
+  border-left: 4px solid var(--red);
+  border-radius: 10px;
+}
+
+.sec-badge-icon { font-size: 1.8rem; }
+.sec-badge-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 2px; }
+.sec-badge-sub { font-size: 0.75rem; color: var(--muted); }
+
+/* Right col — checklist */
+.checks-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.checks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(16,185,129,0.12);
+  color: var(--emerald);
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+/* Architecture diagram */
+.sec-architecture {
+  border-top: 1px solid var(--border);
+  padding-top: 28px;
+}
+
+.arch-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.arch-diagram {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.arch-box {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.arch-box span { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 4px; }
+.arch-box small { font-size: 0.65rem; color: var(--muted); }
+.arch-box.device { border-color: rgba(196,28,42,0.25); background: var(--red-dim); }
+.arch-box.server { border-color: rgba(5,150,105,0.25); background: rgba(5,150,105,0.06); }
+
+.arch-arrow {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--muted2);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .sec-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
