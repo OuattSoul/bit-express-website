@@ -72,7 +72,7 @@
   font-weight: 600 !important;
   letter-spacing: 0.01em;
   box-shadow: 0 4px 14px rgba(196,28,42,0.3);
-  transition: background 0.2s !important, transform 0.2s !important;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .nav-cta:hover {
